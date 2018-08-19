@@ -1,0 +1,7 @@
+<div class="w3-card w3-margin w3-padding">
+  <h2>{{news.title}}</h2>
+  <h5>{{news.title_description}}, {{news.date}}</h5>
+  <!-- <div class="fakeimg" style="height:200px;">{{news.img}}</div> -->
+  <img class="coverimg" [src]="news.img" [alt]="news.title">
+  <p>{{news.description}}</p>
+</div>

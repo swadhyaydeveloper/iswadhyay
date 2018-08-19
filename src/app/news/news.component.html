@@ -1,0 +1,12 @@
+<app-add-news (newsAdded)="onNewsAdded($event)"></app-add-news>
+<div class="w3-row">
+  <div class="w3-threequarter">
+    <!-- loop to display all news -->
+    <app-single-news *ngFor="let new of news" [news]="new"></app-single-news>
+  </div>
+  <div class="w3-quarter">
+    <!-- to display adds -->
+  </div>
+</div>
+
+
