@@ -1,1 +1,15 @@
-<app-news></app-news>
+<mat-toolbar color="primary">      
+    <mat-toolbar-row>
+            <button (click)="drawer.toggle()" mat-mini-fab color="primary"><mat-icon>menu</mat-icon></button>
+        <button mat-button><h3>ISWADHYAY</h3></button>        
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+        <mat-drawer #drawer mode="side">
+          <p class="w3-padding">Auto-resizing sidenav jayneet</p>
+        </mat-drawer>      
+        <div>
+          <app-news></app-news>
+        </div>      
+</mat-drawer-container>
+         
