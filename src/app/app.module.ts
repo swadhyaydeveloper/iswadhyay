@@ -14,7 +14,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 
-import { NewsService } from './services/news.service'
+import { NewsService } from './services/news.service';
+import { UsersComponent } from './users/users.component';
+import { UserComponent } from './users/user/user.component'
 
 
 
@@ -24,7 +26,9 @@ import { NewsService } from './services/news.service'
     AppComponent,
     NewsComponent,
     SingleNewsComponent,
-    AddNewsComponent
+    AddNewsComponent,
+    UsersComponent,
+    UserComponent
 
     
   ],
