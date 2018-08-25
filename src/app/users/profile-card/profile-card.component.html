@@ -1,0 +1,17 @@
+<div class="w3-col l3 m6">
+    <div class="w3-display-container">
+          <div class="w3-card w3-round w3-white w3-margin">
+                  <div class="w3-container">       
+                   <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                   <h4 class="w3-center">{{user.name}}</h4>
+                   <p class="w3-small w3-center">{{user.tagline}}</p>
+                   <hr>   
+                   <p>
+                     <span>skills</span><br>
+                     <span class="w3-tag w3-small w3-pale-red" *ngFor="let skill of user.skills">{{skill.name}}</span>
+                   </p>
+                   <button mat-raised-button color="accent" class="w3-block">View Resume {{index}}</button>
+                  </div>
+                </div>  
+    </div>
+</div>

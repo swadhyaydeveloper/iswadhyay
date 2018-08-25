@@ -1,1 +1,4 @@
-<app-user [user]="users[0]"></app-user>
+<div *ngFor="let user of users; let i = index;">
+       <app-profile-card [user]="user" [index]="i"></app-profile-card>
+</div>
+<app-user [user]="user"></app-user>
