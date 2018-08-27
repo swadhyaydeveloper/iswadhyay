@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { User } from '../models/user.model';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile-card',
@@ -8,10 +9,13 @@ import { User } from '../models/user.model';
 })
 export class ProfileCardComponent implements OnInit {
   @Input() user : User;
-  @Input() index : number;
-  constructor() { }
+  constructor(private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit() {
   }
 
+  viewResume(){
+    console.log(this.user.id);
+    this.router.navigate(['users/user',this.user.id]);
+  }
 }

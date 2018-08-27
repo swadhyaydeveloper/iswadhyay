@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -24,7 +24,17 @@ import {MatButtonModule} from '@angular/material/button';
 import { NewsService } from './services/news.service';
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './users/user/user.component';
-import { ProfileCardComponent } from './users/profile-card/profile-card.component'
+import { ProfileCardComponent } from './users/profile-card/profile-card.component';
+import {Routes, RouterModule} from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
+
+const appRoutes: Routes = [
+  { path:'', component:UsersComponent },
+  { path:'users', component:UsersComponent },
+  { path:'news', component:NewsComponent },
+  { path:'users/user/:id', component:UserComponent },
+  { path:'admin', component:AdminComponent }
+]
 
 
 
@@ -37,7 +47,8 @@ import { ProfileCardComponent } from './users/profile-card/profile-card.componen
     AddNewsComponent,
     UsersComponent,
     UserComponent,
-    ProfileCardComponent
+    ProfileCardComponent,
+    AdminComponent
 
     
   ],
@@ -50,6 +61,7 @@ import { ProfileCardComponent } from './users/profile-card/profile-card.componen
     MatIconModule,
     MatButtonModule,
     HttpClientModule,
+    RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,

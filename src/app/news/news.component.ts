@@ -16,7 +16,7 @@ export class NewsComponent implements OnInit {
   }
 
   onNewsAdded(news:News){
-    this.news.push(news);
+    this._newsservice.addNews(news);
   }
 
 }

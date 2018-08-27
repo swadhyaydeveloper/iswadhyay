@@ -1,0 +1,40 @@
+<div class="w3-container w3-margin w3-padding w3-large w3-half">
+  <input type="text" [(ngModel)]="user.name" placeholder="user.name">
+  <input type="text" [(ngModel)]="user.email" placeholder="user.email">
+  <input type="text" [(ngModel)]="user.mobile" placeholder="user.mobile">
+  <input type="text" [(ngModel)]="user.dob" placeholder="user.dob">
+  <input type="text" [(ngModel)]="city" placeholder="user.city">
+  <input type="text" [(ngModel)]="user.profile_img" placeholder="user.profile_img">
+  <input type="text" [(ngModel)]="user.video_resume" placeholder="user.video">
+  <input type="text" [(ngModel)]="user.profession" placeholder="user.profession">
+  <input type="text" [(ngModel)]="user.tagline" placeholder="user.tagline"><br><br>
+  <input type="text" [(ngModel)]="skill.name" placeholder="skill.name">
+  <input type="text" [(ngModel)]="skill.level" placeholder="skill.level">
+  <button (click)="addSkill()">addSkill</button><br><br>
+  <div *ngFor="let skill of user.skills">
+    {{skill.name}} {{skill.level}}
+  </div><br>
+  <input type="text" [(ngModel)]="workexperience.organization" placeholder="workexperience.organization">
+  <input type="text" [(ngModel)]="workexperience.position" placeholder="workexperience.position">
+  <input type="text" [(ngModel)]="workexperience.description" placeholder="workexperience.description">
+  <input type="text" [(ngModel)]="workexperience.start" placeholder="workexperience.start">
+  <input type="text" [(ngModel)]="workexperience.end" placeholder="workexperience.end">
+  <input type="text" [(ngModel)]="workexperience.url" placeholder="workexperience.url">
+  <button (click)="addWorkexperience()">addExperience</button><br><br>
+  <div *ngFor="let workexperience of user.workexperience">
+    {{workexperience.organization}}
+  </div><br>
+
+  <input type="text" [(ngModel)]="education.institute" placeholder="education.institute">
+  <input type="text" [(ngModel)]="education.stream" placeholder="education.stream">
+  <input type="text" [(ngModel)]="education.degree" placeholder="education.degree">
+  <input type="text" [(ngModel)]="education.start" placeholder="education.start">
+  <input type="text" [(ngModel)]="education.end" placeholder="education.end">
+  <input type="text" [(ngModel)]="education.grade" placeholder="education.grade">
+  <button (click)="addEducation()">addEduaction</button> <br><br>
+  <div *ngFor="let education of user.education">
+    {{education.institute}}
+  </div><br>
+  <button (click)="addUser()">addUser</button>  
+</div>
+<app-add-news class="w3-padding  w3-margin"></app-add-news>

@@ -1,8 +1,8 @@
-<form>
-  <input type="text" placeholder="title" name="title" [(ngModel)]="title">
-  <input type="text" placeholder="title_description" name="title_description" [(ngModel)]="title_description">
-  <input type="text" placeholder="date" name="date" [(ngModel)]="date">
-  <input type="text" placeholder="img" name="img" [(ngModel)]="img">
-  <input type="text" placeholder="description" name="description" [(ngModel)]="description">
-  <input type="submit" (click)="addNews()">
-</form>
+
+  <input type="text" placeholder="title" name="title" [(ngModel)]="news.title">
+  <input type="text" placeholder="title_description" name="title_description" [(ngModel)]="news.title_description">
+  <input type="text" placeholder="date" name="date" [(ngModel)]="news.date">
+  <input type="text" placeholder="img" name="img" [(ngModel)]="news.img">
+  <input type="text" placeholder="description" name="description" [(ngModel)]="news.description">
+  <button (click)="addNews()">addNews</button>
+
